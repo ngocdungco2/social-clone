@@ -1,0 +1,63 @@
+@import "../../style.scss";
+.admin {
+    height: 100vh;
+    @include themify($themes) {
+        padding: 20px 70px;
+        background-color: themed("bgSoft");
+        min-height: 100vh;
+    
+        @include mobile {
+          padding: 10px;
+        }
+    
+        @include tablet {
+          padding: 20px;
+        }
+      }
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: white;
+      border-radius: 10px;
+      min-height: 600px;
+      overflow: hidden;
+  
+      .right {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+        color: #555;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          
+          input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          }
+          
+          button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background-color: #938eef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
